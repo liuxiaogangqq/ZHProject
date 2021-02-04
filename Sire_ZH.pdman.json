@@ -2,7 +2,7 @@
   "modules": [
     {
       "name": "asset",
-      "chnname": "资产管理库",
+      "chnname": "资产管理库表",
       "entities": [
         {
           "title": "asset_info",
