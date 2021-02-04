@@ -1,0 +1,3478 @@
+{
+  "modules": [
+    {
+      "name": "asset",
+      "chnname": "资产管理库",
+      "entities": [
+        {
+          "title": "asset_info",
+          "fields": [
+            {
+              "name": "AssetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产内部id"
+            },
+            {
+              "name": "AssetCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产编号"
+            },
+            {
+              "name": "AssetName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产名称"
+            },
+            {
+              "name": "AssetTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产类别"
+            },
+            {
+              "name": "AssetRegistrant",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "登记人"
+            },
+            {
+              "name": "PurchaseTime",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "购买时间"
+            },
+            {
+              "name": "AssetUnit",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产单位"
+            },
+            {
+              "name": "AssetNum",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产数量"
+            },
+            {
+              "name": "AssetAddress",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "资产位置"
+            },
+            {
+              "name": "AssetSource",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产来源"
+            },
+            {
+              "name": "AssetState",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产状态"
+            },
+            {
+              "name": "AssetBrand",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产品牌"
+            },
+            {
+              "name": "Specification",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产规格"
+            },
+            {
+              "name": "AssetDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "登记日期"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "资产信息"
+        },
+        {
+          "title": "asset_details",
+          "fields": [
+            {
+              "name": "AssetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产内部id"
+            },
+            {
+              "name": "AssetBrand",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产品牌"
+            },
+            {
+              "name": "Specification",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产规格"
+            },
+            {
+              "name": "UseUser",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "使用人"
+            },
+            {
+              "name": "KeeperUser",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "保管人"
+            },
+            {
+              "name": "Remark",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "备注"
+            },
+            {
+              "name": "WarrantyTime",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "保修时间"
+            },
+            {
+              "name": "ServiceLife",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "使用寿命"
+            },
+            {
+              "name": "KeeperDept",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "保管部门"
+            },
+            {
+              "name": "InstallDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "安装日期"
+            },
+            {
+              "name": "ProjectManage",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "工程商"
+            },
+            {
+              "name": "MainManage",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "维保商"
+            },
+            {
+              "name": "MainPerson",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "维保联系人"
+            },
+            {
+              "name": "MainPhone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "维保人手机号"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "资产详情"
+        },
+        {
+          "title": "system_role",
+          "fields": [
+            {
+              "name": "RoleInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "角色主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "RoleName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色名称",
+              "notNull": true
+            },
+            {
+              "name": "Remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "角色描述"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "0：正常，1：删除",
+              "chnname": "删除标识",
+              "notNull": true
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "系统角色"
+        },
+        {
+          "title": "sys_operator",
+          "fields": [
+            {
+              "name": "OperatorInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作员自增主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "OperatorCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "登录名",
+              "notNull": true
+            },
+            {
+              "name": "OperatorName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "真实姓名",
+              "notNull": true
+            },
+            {
+              "name": "Password",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "密码（MD5加密）",
+              "notNull": true
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识",
+              "notNull": true,
+              "defaultValue": "0"
+            },
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "并联人员主键"
+            },
+            {
+              "name": "RoleInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "关联角色主键",
+              "notNull": true
+            },
+            {
+              "name": "RoleName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "角色名称"
+            },
+            {
+              "name": "LoginTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "上次登录时间",
+              "notNull": true
+            },
+            {
+              "name": "Remark",
+              "type": "Intro",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "操作员表"
+        },
+        {
+          "title": "sys_rolemenu",
+          "fields": [
+            {
+              "name": "RoleInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "角色主键",
+              "notNull": true
+            },
+            {
+              "name": "MenuInnerId",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "菜单主键",
+              "notNull": true
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "角色菜单"
+        },
+        {
+          "title": "sys_menu",
+          "fields": [
+            {
+              "name": "MenuInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "菜单主键"
+            },
+            {
+              "name": "MenuCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "菜单标记"
+            },
+            {
+              "name": "MenuName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "菜单名称"
+            },
+            {
+              "name": "UpInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "上级菜单主键"
+            },
+            {
+              "name": "MenuLevel",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "菜单级别"
+            },
+            {
+              "name": "MenuRoute",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "菜单路由"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "0正常，1删除",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "页面菜单"
+        },
+        {
+          "title": "asset_type",
+          "fields": [
+            {
+              "name": "AssetTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产类型内部id"
+            },
+            {
+              "name": "AssetTypeCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产类型编号"
+            },
+            {
+              "name": "AssetTypeName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产类型名称"
+            },
+            {
+              "name": "UpInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "上级资产类型"
+            },
+            {
+              "name": "LevelNum",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "级别层"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产类型删除标识"
+            },
+            {
+              "name": "Remark",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "资产类目"
+        },
+        {
+          "title": "asset_bank",
+          "fields": [
+            {
+              "name": "BankInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资料内部id"
+            },
+            {
+              "name": "BankCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资料编号"
+            },
+            {
+              "name": "BankTitle",
+              "type": "LongString",
+              "remark": "",
+              "chnname": "资料标题"
+            },
+            {
+              "name": "BankBody",
+              "type": "LongText",
+              "remark": "",
+              "chnname": "资料内容"
+            },
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "编辑人"
+            },
+            {
+              "name": "UpdateDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            },
+            {
+              "name": "CreateDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "资产资料库"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "user",
+      "chnname": "组织机构",
+      "entities": [
+        {
+          "title": "sys_userinfo",
+          "fields": [
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "人员内部id",
+              "autoIncrement": true,
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "UserCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "人员编号",
+              "notNull": true
+            },
+            {
+              "name": "UserName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "人员姓名",
+              "notNull": true
+            },
+            {
+              "name": "UserGender",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "性别"
+            },
+            {
+              "name": "CompanyInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "公司内部id",
+              "notNull": true
+            },
+            {
+              "name": "DepartmentInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "部门内部id",
+              "notNull": true
+            },
+            {
+              "name": "Password",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "人员密码"
+            },
+            {
+              "name": "UserTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "人员类型内部id",
+              "notNull": true
+            },
+            {
+              "name": "RoleInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "角色内部id",
+              "notNull": true
+            },
+            {
+              "name": "CellPhone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "PhoneNum",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "座机"
+            },
+            {
+              "name": "ImgerUrl",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "图片"
+            },
+            {
+              "name": "EntryTime",
+              "type": "Date",
+              "remark": "",
+              "chnname": "入职时间"
+            },
+            {
+              "name": "UpdateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            },
+            {
+              "name": "Position",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "职位"
+            },
+            {
+              "name": "UserState",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "人员状态"
+            },
+            {
+              "name": "Email",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "邮箱"
+            },
+            {
+              "name": "IDCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "身份证号"
+            },
+            {
+              "name": "Remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            },
+            {
+              "name": "CreateWay",
+              "type": "DefaultString",
+              "remark": "1、平台添加2、导入添加3、同步添加",
+              "chnname": "添加方式"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "人员信息"
+        },
+        {
+          "title": "sys_deptinfo",
+          "fields": [
+            {
+              "name": "DeptInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "部门内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "DeptCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "部门编号",
+              "notNull": true
+            },
+            {
+              "name": "DeptName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "部门名称",
+              "notNull": true
+            },
+            {
+              "name": "CompanyInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "公司内部id",
+              "notNull": true
+            },
+            {
+              "name": "UpInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "上级内部id"
+            },
+            {
+              "name": "DeptLevel",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "部门级别"
+            },
+            {
+              "name": "Remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            },
+            {
+              "name": "CreateWay",
+              "type": "DefaultString",
+              "remark": "1、平台添加\n2、导入添加\n3、同步添加",
+              "chnname": "添加方式",
+              "notNull": true
+            },
+            {
+              "name": "CreateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "部门信息"
+        },
+        {
+          "title": "hotel_order",
+          "fields": [
+            {
+              "name": "OrderInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "预定内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "ReserveUser",
+              "type": "Name",
+              "remark": "",
+              "chnname": "预约人"
+            },
+            {
+              "name": "CellPhone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "IDCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "证件号"
+            },
+            {
+              "name": "RoomTypeCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "房型编码"
+            },
+            {
+              "name": "RoomTypeName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "房型名称"
+            },
+            {
+              "name": "RoomCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "房号编码"
+            },
+            {
+              "name": "RoomName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "房间号"
+            },
+            {
+              "name": "BeginDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "开始时间"
+            },
+            {
+              "name": "EndDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "结束时间"
+            },
+            {
+              "name": "DateNum",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "天数"
+            },
+            {
+              "name": "RetainDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "保留时间"
+            },
+            {
+              "name": "CheckWay",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "入住方式"
+            },
+            {
+              "name": "CheckStandard",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "入住标准(散客入住)"
+            },
+            {
+              "name": "JTEOrderNum",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "金天鹅单号"
+            },
+            {
+              "name": "CheckStatus",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "入住状态"
+            },
+            {
+              "name": "ClientType",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "客户类型"
+            },
+            {
+              "name": "Price",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "单价"
+            },
+            {
+              "name": "OrderNum",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "预定数"
+            },
+            {
+              "name": "TotalPrice",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "总价"
+            },
+            {
+              "name": "CreateDate",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "Remark",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "备注"
+            },
+            {
+              "name": "WeChatInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "预定人信息"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "酒店预订表"
+        },
+        {
+          "title": "sys_wechat",
+          "fields": [
+            {
+              "name": "WeChatInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "微信账号内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "OpenId",
+              "type": "Name",
+              "remark": "",
+              "chnname": "微信Openid"
+            },
+            {
+              "name": "WechatId",
+              "type": "Name",
+              "remark": "",
+              "chnname": "微信小程序运营号"
+            },
+            {
+              "name": "WechatState",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "微信绑定状态"
+            },
+            {
+              "name": "UserName",
+              "type": "Name",
+              "remark": "",
+              "chnname": "绑定姓名"
+            },
+            {
+              "name": "UserGender",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "绑定性别"
+            },
+            {
+              "name": "IDType",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "证件类型"
+            },
+            {
+              "name": "UserType",
+              "type": "DefaultString",
+              "remark": "客户类型（1.会员；2.中介；3：单位；4：散客）",
+              "chnname": "客户类型"
+            },
+            {
+              "name": "IDCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "证件号码"
+            },
+            {
+              "name": "CellPhone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "UserPwd",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "密码"
+            },
+            {
+              "name": "CompanyName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "公司"
+            },
+            {
+              "name": "DeptName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "部门"
+            },
+            {
+              "name": "ImageUrl",
+              "type": "Name",
+              "remark": "",
+              "chnname": "头像"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "注册日期"
+            },
+            {
+              "name": "NikeName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "微信名称"
+            },
+            {
+              "name": "Email",
+              "type": "Name",
+              "remark": "",
+              "chnname": "邮箱"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "小程序账户"
+        },
+        {
+          "title": "sys_company",
+          "fields": [
+            {
+              "name": "CompanyInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "公司内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "CompanyCode",
+              "type": "Name",
+              "remark": "",
+              "chnname": "公司编号"
+            },
+            {
+              "name": "CompanyName",
+              "type": "Name",
+              "remark": "",
+              "chnname": "公司名称"
+            },
+            {
+              "name": "Remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "公司备注"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "公司信息"
+        },
+        {
+          "title": "sys_usertype",
+          "fields": [
+            {
+              "name": "UserTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "人员类型内部id",
+              "notNull": true,
+              "pk": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "UserTypeCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "人员类型编号",
+              "notNull": true
+            },
+            {
+              "name": "UserTypeName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "人员类型名称",
+              "notNull": true
+            },
+            {
+              "name": "Remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "人员类型"
+        },
+        {
+          "title": "hotel_user_all",
+          "fields": [
+            {
+              "name": "HotelUserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "酒店人员内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "UserName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "人员姓名"
+            },
+            {
+              "name": "CellPhone",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "手机号"
+            },
+            {
+              "name": "IDCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "身份证号"
+            },
+            {
+              "name": "BindUser",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "绑定人员"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "入住人员信息列表"
+        },
+        {
+          "title": "hotel_reserve_room",
+          "fields": [
+            {
+              "name": "ReserveRoomInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "预定房屋内部id",
+              "autoIncrement": true,
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "ReserverCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "预定编码"
+            },
+            {
+              "name": "RoomCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "房屋编码"
+            },
+            {
+              "name": "RoomTypeCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "房屋类型编码"
+            },
+            {
+              "name": "RoomPrice",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "房价"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "OrderInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "预定内部id"
+            },
+            {
+              "name": "OrderCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "预定编码"
+            },
+            {
+              "name": "NeedBreakfast",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "早餐数量"
+            },
+            {
+              "name": "ReserveState",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "预定状态"
+            },
+            {
+              "name": "Remark",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "预定入住房屋"
+        },
+        {
+          "title": "sys_dep_user",
+          "fields": [
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "人员内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": false
+            },
+            {
+              "name": "DeptInnerId",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "部门内部id",
+              "pk": true,
+              "notNull": true
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "部门负责人"
+        },
+        {
+          "title": "sys_user_leave",
+          "fields": [
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "离职人员内部id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "UserList",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "交接人",
+              "pk": false,
+              "notNull": false
+            },
+            {
+              "name": "LeaveTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "离职时间"
+            },
+            {
+              "name": "Remark",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "离职理由"
+            },
+            {
+              "name": "FileAddress",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "文件路径"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "操作时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "人员离职信息"
+        },
+        {
+          "title": "sys_user_id",
+          "fields": [
+            {
+              "name": "MarkInneId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "标识内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "MarkCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "标识号(主)",
+              "notNull": true
+            },
+            {
+              "name": "MarkCodeS",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "标识号(辅)"
+            },
+            {
+              "name": "MarkState",
+              "type": "Integer",
+              "remark": "标识状态1：正常使用2：已挂失（已禁用）3：已退卡  4补卡",
+              "chnname": "标识状态"
+            },
+            {
+              "name": "MarkTypeInnerId",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "卡类型id"
+            },
+            {
+              "name": "UserInnerId",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "人员内部id"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "CodeAddress",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "标识地址"
+            },
+            {
+              "name": "Remark",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "人员标识"
+        },
+        {
+          "title": "sys_mark_type",
+          "fields": [
+            {
+              "name": "MarkTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "标识类型",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "MarkTypeName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "标识类型名称",
+              "notNull": true
+            },
+            {
+              "name": "MarkTypeExt",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "标识扩展"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识",
+              "defaultValue": "0"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "标识类型"
+        },
+        {
+          "title": "sys_information",
+          "fields": [
+            {
+              "name": "NotifyCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "推送唯一主键",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "NotifyType",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "推送类型"
+            },
+            {
+              "name": "NotifyContent",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "推送内容"
+            },
+            {
+              "name": "InitiatorUser",
+              "type": "Integer",
+              "remark": "0代表是系统自动发起  其他用户本身",
+              "chnname": "发起人信息",
+              "defaultValue": "0",
+              "notNull": true
+            },
+            {
+              "name": "UpdateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "PushUser",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "推送人"
+            },
+            {
+              "name": "OrderCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "工单号"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "消息列表"
+        },
+        {
+          "title": "sys_information_type",
+          "fields": [
+            {
+              "name": "InfoTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "消息类型",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "InfoTypeName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "消息类型名称",
+              "notNull": true
+            },
+            {
+              "name": "InfoTypeExt",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "标识扩展"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "删除标识",
+              "defaultValue": "0"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "消息类型"
+        }
+      ],
+      "graphCanvas": {
+        "edges": [],
+        "nodes": []
+      },
+      "associations": []
+    },
+    {
+      "name": "work",
+      "chnname": "工单",
+      "entities": [
+        {
+          "title": "JD_WORK",
+          "fields": [
+            {
+              "name": "WorkInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "工单内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "WorkCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "工单编号"
+            },
+            {
+              "name": "WorkName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "工单名称"
+            },
+            {
+              "name": "WorkSort",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "工单分类"
+            },
+            {
+              "name": "WorkLevel",
+              "type": "Integer",
+              "remark": "1紧急  2普通",
+              "chnname": "工单紧急状态"
+            },
+            {
+              "name": "WorkState",
+              "type": "Integer",
+              "remark": "1开启   2 已接单  3已取消  4挂起中  5完成",
+              "chnname": "工单状态"
+            },
+            {
+              "name": "ContentType",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "内容类型"
+            },
+            {
+              "name": "ContentInfo",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "内容信息"
+            },
+            {
+              "name": "WorkAddress",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "区域位置"
+            },
+            {
+              "name": "WorkLocation",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "地点"
+            },
+            {
+              "name": "WorkImage",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "图片列表"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdateTime",
+              "type": "DateTime",
+              "remark": "当有状态改变时候更新",
+              "chnname": "进度更新时间"
+            },
+            {
+              "name": "DesignUser",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "指派"
+            },
+            {
+              "name": "WorkType",
+              "type": "Integer",
+              "remark": "1系统工单2客户工单",
+              "chnname": "提交工单方式"
+            },
+            {
+              "name": "CreateUser",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "创建"
+            },
+            {
+              "name": "Remark",
+              "type": "MiddleString",
+              "remark": "",
+              "chnname": "备注"
+            },
+            {
+              "name": "ServiceTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "服务时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "酒店工单表"
+        },
+        {
+          "title": "JD_WORK_STATE",
+          "fields": [
+            {
+              "name": "WorkStateInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "工单状态内部id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "WorkStateCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "工单状态编号"
+            },
+            {
+              "name": "WorkStateName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "工单状态名称"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "0正常1删除",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "酒店工单状态"
+        },
+        {
+          "title": "JD_WORK_LOG",
+          "fields": [
+            {
+              "name": "WorkDetailInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "工单详情id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "WorkInnerId",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "工单编号"
+            },
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "操作人内部id"
+            },
+            {
+              "name": "UserSort",
+              "type": "Integer",
+              "remark": "1是员工2是客人",
+              "chnname": "人员类型"
+            },
+            {
+              "name": "BeforeState",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "操作之前状态"
+            },
+            {
+              "name": "AfterState",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "操作之后状态"
+            },
+            {
+              "name": "DealTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "操作时间"
+            },
+            {
+              "name": "WorkContent",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "操作内容"
+            },
+            {
+              "name": "WorkDetail",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "操作详情"
+            },
+            {
+              "name": "WorkImgList",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "图片列表"
+            },
+            {
+              "name": "Remark",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "备注"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "工单详情日志"
+        },
+        {
+          "title": "JD_WORK_SORT",
+          "fields": [
+            {
+              "name": "WorkSortInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "工单类别内部id",
+              "pk": true,
+              "notNull": true
+            },
+            {
+              "name": "WorkSortCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "工单类别编号"
+            },
+            {
+              "name": "WorkSortName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "工单类别名称"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "0正常1删除",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "酒店工单类别"
+        },
+        {
+          "title": "JD_WORK_GOODS",
+          "fields": [
+            {
+              "name": "GoodsInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "酒店物品内部id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "GoodsCode",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "物品编号"
+            },
+            {
+              "name": "GoodsName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "物品名称"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "0正常1删除",
+              "chnname": "删除标识"
+            },
+            {
+              "name": "GoodsNum",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "物品数量"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "酒店物品信息"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
+    }
+  ],
+  "dataTypeDomains": {
+    "datatype": [
+      {
+        "name": "默认字串",
+        "code": "DefaultString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(32)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(32)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      },
+      {
+        "name": "标识号",
+        "code": "IdOrKey",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(32)"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(32)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      },
+      {
+        "name": "标识号-长",
+        "code": "LongKey",
+        "apply": {
+          "MYSQL": {
+            "type": "VARCHAR(64)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(64)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(64)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(64)"
+          }
+        }
+      },
+      {
+        "name": "名称",
+        "code": "Name",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(128)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(128)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(128)"
+          }
+        }
+      },
+      {
+        "name": "备注说明",
+        "code": "Intro",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(512)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(512)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(512)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(512)"
+          }
+        }
+      },
+      {
+        "name": "字串-短",
+        "code": "ShortString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(128)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(128)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(128)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(128)"
+          }
+        }
+      },
+      {
+        "name": "字串-中",
+        "code": "MiddleString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(1024)"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(1024)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(1024)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(1024)"
+          }
+        }
+      },
+      {
+        "name": "字串-长",
+        "code": "LongString",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "ORACLE": {
+            "type": "NVARCHAR2(3072)"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(3072)"
+          },
+          "SQLServer": {
+            "type": "NVARCHAR(3072)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(3072)"
+          }
+        }
+      },
+      {
+        "name": "大文本",
+        "code": "LongText",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "TEXT"
+          },
+          "ORACLE": {
+            "type": "CLOB"
+          },
+          "SQLServer": {
+            "type": "NTEXT"
+          },
+          "PostgreSQL": {
+            "type": "TEXT"
+          }
+        }
+      },
+      {
+        "name": "小数",
+        "code": "Double",
+        "apply": {
+          "JAVA": {
+            "type": "Double"
+          },
+          "MYSQL": {
+            "type": "DECIMAL(32,10)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(32,10)"
+          },
+          "SQLServer": {
+            "type": "DECIMAL(32,10)"
+          },
+          "PostgreSQL": {
+            "type": "DECIMAL(32,10)"
+          }
+        }
+      },
+      {
+        "name": "比例",
+        "code": "Ratio",
+        "apply": {
+          "MYSQL": {
+            "type": "DECIMAL(4,2)"
+          },
+          "JAVA": {
+            "type": "Double"
+          },
+          "ORACLE": {
+            "type": "NUMBER(4,2)"
+          },
+          "SQLServer": {
+            "type": "DECIMAL(4,2)"
+          },
+          "PostgreSQL": {
+            "type": "DECIMAL(4,2)"
+          }
+        }
+      },
+      {
+        "name": "整数",
+        "code": "Integer",
+        "apply": {
+          "JAVA": {
+            "type": "Integer"
+          },
+          "MYSQL": {
+            "type": "INT"
+          },
+          "ORACLE": {
+            "type": "INT"
+          },
+          "SQLServer": {
+            "type": "INT"
+          },
+          "PostgreSQL": {
+            "type": "INT"
+          }
+        }
+      },
+      {
+        "name": "大整数",
+        "code": "BigInt",
+        "apply": {
+          "MYSQL": {
+            "type": "BIGINT"
+          },
+          "JAVA": {
+            "type": "Long"
+          },
+          "ORACLE": {
+            "type": "NUMBER"
+          },
+          "SQLServer": {
+            "type": "BIGINT"
+          },
+          "PostgreSQL": {
+            "type": "BIGINT"
+          }
+        }
+      },
+      {
+        "name": "金额",
+        "code": "Money",
+        "apply": {
+          "JAVA": {
+            "type": "Double"
+          },
+          "MYSQL": {
+            "type": "DECIMAL(32,8)"
+          },
+          "ORACLE": {
+            "type": "NUMBER(32,8)"
+          },
+          "SQLServer": {
+            "type": "DECIMAL(32,8)"
+          },
+          "PostgreSQL": {
+            "type": "DECIMAL(32,8)"
+          }
+        }
+      },
+      {
+        "name": "是否",
+        "code": "YesNo",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(1)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(1)"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(1)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(1)"
+          }
+        }
+      },
+      {
+        "name": "数据字典",
+        "code": "Dict",
+        "apply": {
+          "JAVA": {
+            "type": "String"
+          },
+          "MYSQL": {
+            "type": "VARCHAR(32)"
+          },
+          "ORACLE": {
+            "type": "VARCHAR2(32)"
+          },
+          "SQLServer": {
+            "type": "VARCHAR(32)"
+          },
+          "PostgreSQL": {
+            "type": "VARCHAR(32)"
+          }
+        }
+      },
+      {
+        "name": "日期",
+        "code": "Date",
+        "apply": {
+          "JAVA": {
+            "type": "Date"
+          },
+          "MYSQL": {
+            "type": "DATE"
+          },
+          "ORACLE": {
+            "type": "DATE"
+          },
+          "SQLServer": {
+            "type": "DATE"
+          },
+          "PostgreSQL": {
+            "type": "DATE"
+          }
+        }
+      },
+      {
+        "name": "日期时间",
+        "code": "DateTime",
+        "apply": {
+          "JAVA": {
+            "type": "Date"
+          },
+          "MYSQL": {
+            "type": "DATETIME"
+          },
+          "ORACLE": {
+            "type": "DATE"
+          },
+          "SQLServer": {
+            "type": "DATE"
+          },
+          "PostgreSQL": {
+            "type": "DATE"
+          }
+        }
+      },
+      {
+        "name": "单字符",
+        "code": "Char",
+        "apply": {
+          "MYSQL": {
+            "type": "CHAR(1)"
+          },
+          "ORACLE": {
+            "type": "CHAR(1)"
+          },
+          "JAVA": {
+            "type": "String"
+          },
+          "SQLServer": {
+            "type": "CHAR(1)"
+          },
+          "PostgreSQL": {
+            "type": "CHAR(1)"
+          }
+        }
+      }
+    ],
+    "database": [
+      {
+        "code": "MYSQL",
+        "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.pk ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
+        "fileShow": true,
+        "defaultDatabase": true,
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'AUTO_INCREMENT' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,' ')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,' ') }}'{{=it.separator}}\n$blankline\n",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}}{{=it.separator}}",
+        "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\nas select * from {{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n\ndrop table {{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n\nCREATE TABLE {{=it.newEntity.title}}(\n{{ pkList = [] ; }}\n{{~it.newEntity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}'{{=it.separator}}\n$blankline\n\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.oldEntity.fields) ;}}\ninsert into {{=it.newEntity.title}}(\n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}\n) \nselect \n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}\nfrom PDMAN_UP_{{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n\ndrop table PDMAN_UP_{{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n{{~it.newEntity.indexs:index}}\nALTER TABLE {{=it.newEntity.title}} ADD {{? index.isUnique}}UNIQUE{{??}}INDEX{{?}} {{=index.name}}({{=it.func.join(...index.fields,',')}}){{=it.separator}}\n{{~}}",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.pk}}PRIMARY KEY{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}} {{? it.field.addAfter}}AFTER {{=it.field.addAfter}}{{?}}{{=it.separator}}",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}}{{=it.separator}}",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP {{=it.field.name}}{{=it.separator}}",
+        "deleteIndexTemplate": "ALTER TABLE {{=it.entity.title}} DROP INDEX {{=it.index.name}}{{=it.separator}}",
+        "createIndexTemplate": "ALTER TABLE {{=it.entity.title}} ADD {{? it.index.isUnique}}UNIQUE{{??}}INDEX{{?}} {{=it.index.name}}({{=it.func.join(...it.index.fields,',')}}){{=it.separator}}",
+        "updateTableComment": "ALTER TABLE {{=it.entity.title}} COMMENT '{{=it.entity.chnname}}'{{=it.separator}}"
+      },
+      {
+        "code": "ORACLE",
+        "template": "DROP TABLE {{=it.entity.title}}{{=it.separator}}\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}  {{= field.pk ? 'NOT NULL' : '' }} {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n){{=it.separator}}\n$blankline\nCOMMENT ON TABLE {{=it.entity.title}} IS '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'{{=it.separator}}\n{{~it.entity.fields:field:index}}\nCOMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS '{{=it.func.join(field.chnname,field.remark,';')}}'{{=it.separator}}\n{{~}}",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}{{? field.defaultValue}} DEFAULT {{=field.defaultValue}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n){{=it.separator}}\n$blankline\n{{? it.entity.chnname || it.entity.remark}}COMMENT ON TABLE {{=it.entity.title}} IS {{? it.entity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.entity.chnname}}'{{?}}{{=it.separator}}{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.chnname || field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}}{{=it.separator}}{{?}}\n{{~}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}}{{=it.separator}}\r\n$blankline",
+        "rebuildTableTemplate": "CREATE TABLE PDMAN_UP_{{=it.oldEntity.title}}\nAS SELECT * FROM {{=it.oldEntity.title}}{{=it.separator}}\n$blankline\nDROP TABLE {{=it.oldEntity.title}}{{=it.separator}}\n$blankline\nCREATE TABLE {{=it.newEntity.title}}(\n{{ pkList = [] ; }}{{~it.newEntity.fields:field:index}}{{? field.pk }}{{ pkList.push(field.name) }}{{?}}    {{=field.name}} {{=field.type}}{{? field.defaultValue}} DEFAULT {{=field.defaultValue}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}{{? pkList.length >0 }}    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}}){{?}}\n){{=it.separator}}\n$blankline\n{{? it.newEntity.chnname || it.newEntity.remark}}COMMENT ON TABLE {{=it.newEntity.title}} IS {{? it.newEntity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.newEntity.chnname}}'{{?}};{{?}}{{=it.separator}}\n{{~it.newEntity.fields:field:index}}\n{{? field.chnname || field.remark}}COMMENT ON COLUMN {{=it.newEntity.title}}.{{=field.name}} IS {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}};{{?}}{{=it.separator}}\n{{~}}\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.oldEntity.fields) ;}}\n$blankline\nINSERT INTO {{=it.newEntity.title}}(\n{{~sameCols:field:index}}   {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}) \nSELECT\n{{~sameCols:field:index}}   {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}FROM PDMAN_UP_{{=it.oldEntity.title}}{{=it.separator}}\n\nDROP TABLE PDMAN_UP_{{=it.oldEntity.title}}{{=it.separator}}\n{{~it.newEntity.indexs:index}}\nCREATE{{? index.isUnique}} UNIQUE{{?}} INDEX {{=index.name}} ON {{=it.newEntity.title}}({{=it.func.join(index.fields,',')}}){{=it.separator}}\n{{~}}",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD({{=it.field.name}} {{=it.field.type}}{{? it.field.defaultValue}} DEFAULT {{=it.field.defaultValue}}{{?}}{{? it.field.notNull}} NOT NULL{{?}}){{=it.separator}}\r\n{{? it.field.chnname || it.field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=it.field.name}} IS {{? it.field.remark}}'{{=it.field.remark}}'{{??}}'{{=it.field.chnname}}'{{?}}{{=it.separator}}{{?}}\r\n$blankline",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY({{=it.field.name}} {{=it.field.type}}{{? it.field.defaultValue}} DEFAULT {{=it.field.defaultValue}}{{?}}{{? it.field.notNull}} NOT NULL{{?}}){{=it.separator}}\r\n{{? it.field.chnname || it.field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=it.field.name}} IS {{? it.field.remark}}'{{=it.field.remark}}'{{??}}'{{=it.field.chnname}}'{{?}}{{=it.separator}}{{=it.separator}}{{?}}\r\n$blankline",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP({{=it.field.name}}){{=it.separator}}\r\n$blankline",
+        "deleteIndexTemplate": "DROP INDEX {{=it.entity.title}}.{{=it.index.name}}{{=it.separator}}\r\n$blankline",
+        "createIndexTemplate": "CREATE{{? it.index.isUnique}} UNIQUE{{?}} INDEX {{=it.index.name}} ON {{=it.entity.title}}({{=it.func.join(it.index.fields,',')}}){{=it.separator}}\r\n$blankline",
+        "updateTableComment": "{{? it.entity.chnname || it.entity.remark}}COMMENT ON TABLE {{=it.entity.title}} IS {{? it.entity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.entity.chnname}}'{{?}}{{=it.separator}}{{?}}\r\n$blankline"
+      },
+      {
+        "code": "SQLServer",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} {{= field.autoIncrement ? 'IDENTITY(1,1)' : '' }} {{= field.defaultValue ? it.func.join('DEFAULT',field.defaultValue,' ') : '' }}  {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    CONSTRAINT PK_{{=it.entity.title}} PRIMARY KEY CLUSTERED ({{~pkList:pkName:i}}{{= pkName }} ASC {{= i<pkList.length-1 ? ',' : '' }}{{~}}) ON [PRIMARY] \n{{?}}\n){{=it.separator}}\n\n$blankline\nEXECUTE sp_addextendedproperty N'MS_Description', '{{= it.entity.chnname || it.entity.remark}}', N'user', N'dbo', N'table', N'{{=it.entity.title}}', NULL, NULL{{=it.separator}}\n{{~it.entity.fields:field:index}}\n{{? field.chnname || field.remark}}EXECUTE sp_addextendedproperty N'MS_Description', {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}}, N'user', N'dbo', N'table', N'{{=it.entity.title}}', N'column', N'{{=field.name}}'{{=it.separator}}{{?}}\n{{~}}\n",
+        "deleteTableTemplate": "",
+        "rebuildTableTemplate": "",
+        "createFieldTemplate": "",
+        "updateFieldTemplate": "",
+        "deleteFieldTemplate": "",
+        "deleteIndexTemplate": "",
+        "createIndexTemplate": "",
+        "updateTableComment": ""
+      },
+      {
+        "code": "PostgreSQL",
+        "template": "DROP TABLE {{=it.entity.title}};\n$blankline\nCREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.pk ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.entity.chnname,it.entity.remark,';') }}'",
+        "createTableTemplate": "CREATE TABLE {{=it.entity.title}}(\n{{ pkList = [] ; }}\n{{~it.entity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}}{{? field.defaultValue}} DEFAULT {{=field.defaultValue}}{{?}}{{= field.notNull ? ' NOT NULL' : '' }}{{= index < it.entity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n){{=it.separator}}\n$blankline\n{{? it.entity.chnname || it.entity.remark}}COMMENT ON TABLE {{=it.entity.title}} IS {{? it.entity.remark}}'{{=it.entity.remark}}'{{??}}'{{=it.entity.chnname}}'{{?}}{{=it.separator}}{{?}}\n{{~it.entity.fields:field:index}}\n{{? field.chnname || field.remark}}COMMENT ON COLUMN {{=it.entity.title}}.{{=field.name}} IS {{? field.remark}}'{{=field.remark}}'{{??}}'{{=field.chnname}}'{{?}}{{=it.separator}}{{?}}\n{{~}}",
+        "deleteTableTemplate": "DROP TABLE {{=it.entity.title}}{{=it.separator}}",
+        "rebuildTableTemplate": "create table PDMAN_UP_{{=it.oldEntity.title}}\nas select * from {{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n\ndrop table {{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n\nCREATE TABLE {{=it.newEntity.title}}(\n{{ pkList = [] ; }}\n{{~it.newEntity.fields:field:index}}\n    {{? field.pk }}{{ pkList.push(field.name) }}{{?}}\n    {{=field.name}} {{=field.type}} {{= field.notNull ? 'NOT NULL' : '' }} COMMENT '{{=it.func.join(field.chnname,field.remark,';')}}' {{= index < it.newEntity.fields.length-1 ? ',' : ( pkList.length>0 ? ',' :'' ) }}\n{{~}}\n{{? pkList.length >0 }}\n    PRIMARY KEY ({{~pkList:pkName:i}}{{= pkName }}{{= i<pkList.length-1 ? ',' : '' }}{{~}})\n{{?}}\n) COMMENT = '{{=it.func.join(it.newEntity.chnname,it.newEntity.remark,';') }}'{{=it.separator}}\n$blankline\n\n{{ sameCols = it.func.intersect(it.newEntity.fields,it.oldEntity.fields) ;}}\ninsert into {{=it.newEntity.title}}(\n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}\n) \nselect \n{{~sameCols:field:index}}\n    {{=field.name}}{{? index<sameCols.length-1}},{{?}}\n{{~}}\nfrom PDMAN_UP_{{=it.oldEntity.title}}{{=it.separator}}\n$blankline\n\ndrop table PDMAN_UP_{{=it.oldEntity.title}}{{=it.separator}}",
+        "createFieldTemplate": "ALTER TABLE {{=it.entity.title}} ADD COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.pk}}PRIMARY KEY{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}} {{? it.field.addAfter}}AFTER {{=it.field.addAfter}}{{?}}{{=it.separator}}",
+        "updateFieldTemplate": "ALTER TABLE {{=it.entity.title}} MODIFY COLUMN {{=it.field.name}} {{=it.field.type}} {{? it.field.notNull}}NOT NULL{{?}} {{? it.field.defaultValue}}DEFAULT {{? null==it.field.defaultValue}}NULL{{??}}'{{=it.field.defaultValue}}'{{?}}{{?}} {{? it.field.autoIncrement}}AUTO_INCREMENT{{?}} {{? it.field.chnname}}COMMENT '{{=it.field.chnname}}'{{?}}{{=it.separator}}",
+        "deleteFieldTemplate": "ALTER TABLE {{=it.entity.title}} DROP {{=it.field.name}}{{=it.separator}}",
+        "deleteIndexTemplate": "ALTER TABLE {{=it.entity.title}} DROP INDEX {{=it.index.name}}{{=it.separator}}",
+        "createIndexTemplate": "ALTER TABLE {{=it.entity.title}} ADD {{? it.index.isUnique}}UNIQUE{{??}}INDEX{{?}} {{=it.index.name}}({{=it.func.join(...it.index.fields,',')}}){{=it.separator}}",
+        "updateTableComment": "ALTER TABLE {{=it.entity.title}} COMMENT '{{=it.entity.chnname}}'{{=it.separator}}"
+      },
+      {
+        "code": "JAVA",
+        "template": "package group.rober.pdman.{{=it.module.name}}.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n$blankline\n\n/** {{=it.entity.chnname}} */\n@Table(name=\"{{=it.entity.title}}\")\npublic class {{=it.func.camel(it.entity.title,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    {{? field.pk }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=it.func.camel(field.name,false)}} ;\n{{~}}\n$blankline\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public {{=field.type}} get{{=it.func.camel(field.name,true)}}(){\n        return this.{{=it.func.camel(field.name,false)}};\n    }\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public void set{{=it.func.camel(field.name,true)}}({{=field.type}} {{= it.func.camel(field.name,false) }}){\n        this.{{=it.func.camel(field.name,false)}} = {{= it.func.camel(field.name,false) }};\n    }\n{{~}}\n}",
+        "createTableTemplate": "package group.rober.pdman.{{=it.module.name}}.entity;\n$blankline\nimport javax.persistence.*;\nimport java.io.Serializable;\nimport java.util.Date;\n$blankline\n$blankline\n@Table(name=\"{{=it.entity.title}}\")\npublic class {{=it.func.camel(it.entity.title,true) }} implements Serializable,Cloneable{\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    {{? field.pk }}\n    @Id\n    @GeneratedValue\n    {{?}}\n    private {{=field.type}} {{=field.name}};\n{{~}}\n$blankline\n{{~it.entity.fields:field:index}}\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public {{=field.type}} get{{=field.name}}(){\n        return this.{{=field.name}};\n    }\n    /** {{=it.func.join(field.chnname,field.remark,';')}} */\n    public void set{{=field.name}}({{=field.type}} {{= field.name }}){\n        this.{{=field.name}} = {{= field.name }};\n    }\n{{~}}\n}",
+        "deleteTableTemplate": "",
+        "rebuildTableTemplate": "",
+        "createFieldTemplate": "",
+        "updateFieldTemplate": "",
+        "deleteFieldTemplate": "",
+        "deleteIndexTemplate": "",
+        "createIndexTemplate": "",
+        "updateTableComment": ""
+      }
+    ]
+  }
+}
