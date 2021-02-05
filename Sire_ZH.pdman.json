@@ -3476,6 +3476,12 @@
               "notNull": true
             },
             {
+              "name": "untitled1",
+              "type": "DefaultString",
+              "remark": "1：免费  2：付费",
+              "chnname": "订单类型"
+            },
+            {
               "name": "OrderPrice",
               "type": "Integer",
               "remark": "整数，存取时需要乘或除100",
