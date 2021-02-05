@@ -3002,6 +3002,463 @@
         "edges": []
       },
       "associations": []
+    },
+    {
+      "name": "meet",
+      "chnname": "会议室",
+      "entities": [
+        {
+          "title": "meet_room",
+          "fields": [
+            {
+              "name": "MeetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "CreatBy",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "创建人"
+            },
+            {
+              "name": "CreatTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            },
+            {
+              "name": "UpdateBy",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "更新人"
+            },
+            {
+              "name": "UpdateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "更新时间"
+            },
+            {
+              "name": "RoomName",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "会议室名称",
+              "notNull": true
+            },
+            {
+              "name": "RoomType",
+              "type": "Integer",
+              "remark": "0:完全开放 1:园区内部 2:仅中核内部",
+              "chnname": "会议室类型",
+              "notNull": true
+            },
+            {
+              "name": "RoomPic",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "会议室照片",
+              "notNull": true
+            },
+            {
+              "name": "PayType",
+              "type": "Integer",
+              "remark": "0：免费  1：收费",
+              "chnname": "计费方式",
+              "notNull": true
+            },
+            {
+              "name": "UnitPrice",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "每小时单价",
+              "notNull": true
+            },
+            {
+              "name": "MinTime",
+              "type": "DefaultString",
+              "remark": "（分钟）最小值60分钟",
+              "chnname": "预计最小单位",
+              "notNull": true
+            },
+            {
+              "name": "StartTime",
+              "type": "DefaultString",
+              "remark": "可以预约时间,格式(HH:mm:ss)",
+              "chnname": "预计开始时间",
+              "notNull": true
+            },
+            {
+              "name": "EndTime",
+              "type": "DefaultString",
+              "remark": "截至预约时间,格式(HH:mm:ss)",
+              "chnname": "预订截止时间",
+              "notNull": true
+            },
+            {
+              "name": "Status",
+              "type": "Integer",
+              "remark": "0：启用1：禁用",
+              "chnname": "状态 是否启用",
+              "notNull": true
+            },
+            {
+              "name": "FixTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "装修时间"
+            },
+            {
+              "name": "SiteArea",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "场地面积"
+            },
+            {
+              "name": "HouseLoc",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "楼宇位置"
+            },
+            {
+              "name": "Floor",
+              "type": "Integer",
+              "remark": "所属楼层",
+              "chnname": "楼层"
+            },
+            {
+              "name": "ColumnNum",
+              "type": "Integer",
+              "remark": "场地柱子数量",
+              "chnname": "场柱"
+            },
+            {
+              "name": "Capacity",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "可容纳人数"
+            },
+            {
+              "name": "StandA",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "预留字段"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "会议室详情表"
+        },
+        {
+          "title": "meet_devices",
+          "fields": [
+            {
+              "name": "DeviceInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "MeetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议室主键",
+              "notNull": true
+            },
+            {
+              "name": "AssetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产主键",
+              "notNull": true
+            },
+            {
+              "name": "DeviceName",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "设备名称"
+            },
+            {
+              "name": "DeviceModel",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "设备型号"
+            },
+            {
+              "name": "DeviceType",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "设备类型"
+            },
+            {
+              "name": "DeviceIp",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "IP"
+            },
+            {
+              "name": "AssetCode",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "资产编号"
+            },
+            {
+              "name": "EnableDate",
+              "type": "Date",
+              "remark": "",
+              "chnname": "启用日期"
+            },
+            {
+              "name": "DeviceStatus",
+              "type": "Integer",
+              "remark": "0：在线1：离线2：报警 3：其他",
+              "chnname": "设备状态"
+            },
+            {
+              "name": "DeviceSn",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "设备SN号"
+            },
+            {
+              "name": "StandA",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "预留字段"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "会议室设备表"
+        },
+        {
+          "title": "meet_order",
+          "fields": [
+            {
+              "name": "OrderInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "订单主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "UserInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "用户主键",
+              "notNull": true
+            },
+            {
+              "name": "MeetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议室主键",
+              "notNull": true
+            },
+            {
+              "name": "OrderNum",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "订单编号",
+              "notNull": true
+            },
+            {
+              "name": "OrderCreatAt",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "订单创建时间",
+              "notNull": true
+            },
+            {
+              "name": "OrderStatus",
+              "type": "Integer",
+              "remark": "0：已支付  1：已取消  2：待支付 3：超时未支付",
+              "chnname": "订单状态",
+              "notNull": true
+            },
+            {
+              "name": "OrderPrice",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "订单价格"
+            },
+            {
+              "name": "MeetSTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "会议开始时间",
+              "notNull": true
+            },
+            {
+              "name": "MeetETime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "会议结束时间",
+              "notNull": true
+            },
+            {
+              "name": "MeetName",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "会议名称"
+            },
+            {
+              "name": "MeetPersons",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "参会人"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "会议室订单表"
+        }
+      ],
+      "graphCanvas": {}
     }
   ],
   "dataTypeDomains": {
