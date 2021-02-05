@@ -846,6 +846,87 @@
             }
           ],
           "chnname": "资产资料库"
+        },
+        {
+          "title": "sys_floor",
+          "fields": [
+            {
+              "name": "FloorInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "FloorNum",
+              "type": "DefaultString",
+              "remark": "(例：1栋 或  15层)",
+              "chnname": "楼栋或楼层",
+              "notNull": true
+            },
+            {
+              "name": "UpInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "上级楼层主键"
+            },
+            {
+              "name": "DelFlag",
+              "type": "DefaultString",
+              "remark": "1:正常 2：删除",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "楼层表"
         }
       ],
       "graphCanvas": {
@@ -3060,7 +3141,7 @@
             {
               "name": "RoomPic",
               "type": "ShortString",
-              "remark": "",
+              "remark": "(可能多张，最多5张)",
               "chnname": "会议室照片",
               "notNull": true
             },
@@ -3073,8 +3154,8 @@
             },
             {
               "name": "UnitPrice",
-              "type": "DefaultString",
-              "remark": "",
+              "type": "Integer",
+              "remark": "存取时需要乘或除100",
               "chnname": "每小时单价",
               "notNull": true
             },
@@ -3125,10 +3206,10 @@
               "chnname": "楼宇位置"
             },
             {
-              "name": "Floor",
+              "name": "FloorInnerId",
               "type": "Integer",
-              "remark": "所属楼层",
-              "chnname": "楼层"
+              "remark": "",
+              "chnname": "楼层主键"
             },
             {
               "name": "ColumnNum",
@@ -3225,6 +3306,13 @@
               "notNull": true
             },
             {
+              "name": "AssetTypeInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "资产类型主键(设备类型)",
+              "notNull": true
+            },
+            {
               "name": "DeviceName",
               "type": "LongKey",
               "remark": "",
@@ -3237,16 +3325,16 @@
               "chnname": "设备型号"
             },
             {
-              "name": "DeviceType",
-              "type": "DefaultString",
-              "remark": "",
-              "chnname": "设备类型"
-            },
-            {
               "name": "DeviceIp",
               "type": "DefaultString",
               "remark": "",
-              "chnname": "IP"
+              "chnname": "IP地址"
+            },
+            {
+              "name": "DevicePort",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "端口号"
             },
             {
               "name": "AssetCode",
@@ -3261,10 +3349,16 @@
               "chnname": "启用日期"
             },
             {
-              "name": "DeviceStatus",
+              "name": "OnLineStatus",
               "type": "Integer",
-              "remark": "0：在线1：离线2：报警 3：其他",
-              "chnname": "设备状态"
+              "remark": "1：在线 2：离线",
+              "chnname": "设备离在线状态"
+            },
+            {
+              "name": "AlarmStatus",
+              "type": "Integer",
+              "remark": "1：正常 2：报警",
+              "chnname": "设备报警状态"
             },
             {
               "name": "DeviceSn",
@@ -3356,29 +3450,35 @@
             },
             {
               "name": "OrderNum",
-              "type": "LongKey",
+              "type": "ShortString",
               "remark": "",
               "chnname": "订单编号",
               "notNull": true
             },
             {
-              "name": "OrderCreatAt",
+              "name": "CreateTime",
               "type": "DateTime",
               "remark": "",
               "chnname": "订单创建时间",
               "notNull": true
             },
             {
+              "name": "FinshTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "订单完成时间"
+            },
+            {
               "name": "OrderStatus",
               "type": "Integer",
-              "remark": "0：已支付  1：已取消  2：待支付 3：超时未支付",
+              "remark": "1：已支付  2：已取消  3：待支付 4：超时未支付",
               "chnname": "订单状态",
               "notNull": true
             },
             {
               "name": "OrderPrice",
-              "type": "DefaultString",
-              "remark": "",
+              "type": "Integer",
+              "remark": "整数，存取时需要乘或除100",
               "chnname": "订单价格"
             },
             {
@@ -3406,6 +3506,24 @@
               "type": "DefaultString",
               "remark": "",
               "chnname": "参会人"
+            },
+            {
+              "name": "UserSource",
+              "type": "Integer",
+              "remark": "1:小程序2：其他用户",
+              "chnname": "用户来源（小程序和其他用户）"
+            },
+            {
+              "name": "ExterOrderNum",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "外部订单号(微信或支付宝)"
+            },
+            {
+              "name": "untitled",
+              "type": "DefaultString",
+              "remark": "1:微信 2：支付宝  3:其他",
+              "chnname": "支付方式(微信或支付宝)"
             }
           ],
           "indexs": [],
@@ -3456,9 +3574,95 @@
             }
           ],
           "chnname": "会议室订单表"
+        },
+        {
+          "title": "meet_reserved",
+          "fields": [
+            {
+              "name": "OrderInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "订单主键",
+              "notNull": true
+            },
+            {
+              "name": "MeetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议室主键",
+              "notNull": true
+            },
+            {
+              "name": "MeetSTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "会议开始时间",
+              "notNull": true
+            },
+            {
+              "name": "MeetETime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "会议结束时间",
+              "notNull": true
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "已预约表",
+          "remark": "包含已支付和待支付"
         }
       ],
-      "graphCanvas": {}
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
     }
   ],
   "dataTypeDomains": {
