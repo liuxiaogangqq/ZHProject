@@ -846,87 +846,6 @@
             }
           ],
           "chnname": "资产资料库"
-        },
-        {
-          "title": "sys_floor",
-          "fields": [
-            {
-              "name": "FloorInnerId",
-              "type": "Integer",
-              "remark": "",
-              "chnname": "主键",
-              "pk": true,
-              "notNull": true,
-              "autoIncrement": true
-            },
-            {
-              "name": "FloorNum",
-              "type": "DefaultString",
-              "remark": "(例：1栋 或  15层)",
-              "chnname": "楼栋或楼层",
-              "notNull": true
-            },
-            {
-              "name": "UpInnerId",
-              "type": "Integer",
-              "remark": "",
-              "chnname": "上级楼层主键"
-            },
-            {
-              "name": "DelFlag",
-              "type": "DefaultString",
-              "remark": "1:正常 2：删除",
-              "chnname": "删除标识"
-            }
-          ],
-          "indexs": [],
-          "headers": [
-            {
-              "fieldName": "chnname",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "name",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "type",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "dataType",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "remark",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "pk",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "notNull",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "autoIncrement",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "defaultValue",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "relationNoShow",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "uiHint",
-              "relationNoShow": true
-            }
-          ],
-          "chnname": "楼层表"
         }
       ],
       "graphCanvas": {
@@ -3102,9 +3021,9 @@
             },
             {
               "name": "CreatBy",
-              "type": "IdOrKey",
+              "type": "Integer",
               "remark": "",
-              "chnname": "创建人"
+              "chnname": "创建人ID"
             },
             {
               "name": "CreatTime",
@@ -3114,7 +3033,7 @@
             },
             {
               "name": "UpdateBy",
-              "type": "IdOrKey",
+              "type": "Integer",
               "remark": "",
               "chnname": "更新人"
             },
@@ -3132,10 +3051,10 @@
               "notNull": true
             },
             {
-              "name": "RoomType",
+              "name": "RoomAuth",
               "type": "Integer",
               "remark": "1:完全开放 2:园区内部 3:仅中核内部",
-              "chnname": "会议室类型",
+              "chnname": "会议室预定权限",
               "notNull": true
             },
             {
@@ -3161,7 +3080,7 @@
             },
             {
               "name": "MinTime",
-              "type": "DefaultString",
+              "type": "Integer",
               "remark": "（分钟）最小值60分钟",
               "chnname": "预计最小单位",
               "notNull": true
@@ -3194,22 +3113,37 @@
               "chnname": "装修时间"
             },
             {
-              "name": "SiteArea",
-              "type": "LongKey",
+              "name": "SiteLong",
+              "type": "DefaultString",
               "remark": "",
-              "chnname": "场地面积"
+              "chnname": "场地长度",
+              "notNull": true
             },
             {
-              "name": "HouseLoc",
-              "type": "LongKey",
+              "name": "SiteWide",
+              "type": "DefaultString",
               "remark": "",
-              "chnname": "楼宇位置"
+              "chnname": "场地宽度",
+              "notNull": true
+            },
+            {
+              "name": "SiteHigh",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "场地高度",
+              "notNull": true
             },
             {
               "name": "FloorInnerId",
               "type": "Integer",
               "remark": "",
-              "chnname": "楼层主键"
+              "chnname": "楼宇位置ID"
+            },
+            {
+              "name": "FloorName",
+              "type": "ShortString",
+              "remark": "",
+              "chnname": "楼宇位置描述"
             },
             {
               "name": "ColumnNum",
@@ -3222,6 +3156,19 @@
               "type": "Integer",
               "remark": "",
               "chnname": "可容纳人数"
+            },
+            {
+              "name": "RoomType",
+              "type": "Integer",
+              "remark": "暂不用(以后可能会区分类型：比如普通会议室、视频会议室等等)",
+              "chnname": "会议室类型"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "1:正常 2：删除",
+              "chnname": "删除标记",
+              "defaultValue": "1"
             },
             {
               "name": "StandA",
@@ -3313,6 +3260,12 @@
               "notNull": true
             },
             {
+              "name": "AssetTypeName",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "资产类型类型名称"
+            },
+            {
               "name": "DeviceName",
               "type": "LongKey",
               "remark": "",
@@ -3365,6 +3318,12 @@
               "type": "LongKey",
               "remark": "",
               "chnname": "设备SN号"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "1:正常 2：删除",
+              "chnname": "删除标记"
             },
             {
               "name": "StandA",
@@ -3469,17 +3428,24 @@
               "chnname": "订单完成时间"
             },
             {
-              "name": "OrderStatus",
+              "name": "PayTime",
+              "type": "DateTime",
+              "remark": "付费订单支付时间",
+              "chnname": "订单支付时间"
+            },
+            {
+              "name": "OrderType",
               "type": "Integer",
-              "remark": "1：已支付  2：已取消  3：待支付 4：超时未支付",
-              "chnname": "订单状态",
+              "remark": "1：免费  2：付费",
+              "chnname": "订单类型",
               "notNull": true
             },
             {
-              "name": "untitled1",
-              "type": "DefaultString",
-              "remark": "1：免费  2：付费",
-              "chnname": "订单类型"
+              "name": "OrderStatus",
+              "type": "Integer",
+              "remark": "1：已支付  2：已取消  3：待支付  4:超时未支付取消",
+              "chnname": "订单状态",
+              "notNull": true
             },
             {
               "name": "OrderPrice",
@@ -3500,6 +3466,12 @@
               "remark": "",
               "chnname": "会议结束时间",
               "notNull": true
+            },
+            {
+              "name": "MeetDuration",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议时长"
             },
             {
               "name": "MeetName",
@@ -3526,10 +3498,29 @@
               "chnname": "外部订单号(微信或支付宝)"
             },
             {
-              "name": "untitled",
+              "name": "WxTradeType",
               "type": "DefaultString",
+              "remark": "JSAPI、NATIVE、APP",
+              "chnname": "微信交易类型"
+            },
+            {
+              "name": "PayMethod",
+              "type": "Integer",
               "remark": "1:微信 2：支付宝  3:其他",
               "chnname": "支付方式(微信或支付宝)"
+            },
+            {
+              "name": "CompanyName",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "公司名称"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "1:正常  2：删除",
+              "chnname": "删除标记",
+              "defaultValue": "1"
             }
           ],
           "indexs": [],
@@ -3611,6 +3602,12 @@
               "remark": "",
               "chnname": "会议结束时间",
               "notNull": true
+            },
+            {
+              "name": "MeetDuration",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议时长"
             }
           ],
           "indexs": [],
@@ -3661,7 +3658,193 @@
             }
           ],
           "chnname": "已预约表",
-          "remark": "包含已支付和待支付"
+          "remark": "包含已支付和待支付,如果超时未支付需移除该订单"
+        },
+        {
+          "title": "sys_floor",
+          "fields": [
+            {
+              "name": "FloorInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "FloorName",
+              "type": "DefaultString",
+              "remark": "(例：1栋 或  15层)",
+              "chnname": "楼栋或楼层",
+              "notNull": true
+            },
+            {
+              "name": "UpInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "上级楼层主键"
+            },
+            {
+              "name": "CreateTime",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间",
+              "defaultValue": "NOW()"
+            },
+            {
+              "name": "DelFlag",
+              "type": "Integer",
+              "remark": "1:正常 2：删除",
+              "chnname": "删除标识"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "楼层表"
+        },
+        {
+          "title": "meet_usage",
+          "fields": [
+            {
+              "name": "UsageInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "主键",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "MeetInnerId",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议室主键"
+            },
+            {
+              "name": "RoomName",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "会议室名称"
+            },
+            {
+              "name": "UseDate",
+              "type": "Date",
+              "remark": "",
+              "chnname": "统计日期"
+            },
+            {
+              "name": "OpenTime",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议室当天开放时长"
+            },
+            {
+              "name": "UseTime",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会议室当天使用时长"
+            },
+            {
+              "name": "UseRate",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "使用率"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "会议室使用数据统计"
         }
       ],
       "graphCanvas": {
